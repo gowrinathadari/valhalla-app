@@ -2,7 +2,7 @@ FROM node:16.17.0-alpine as builder
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 COPY . /app
-RUN npm i
+RUN npm install
 
 ENV NODE_ENV production
 RUN npm run build
